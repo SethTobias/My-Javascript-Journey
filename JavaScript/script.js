@@ -14,7 +14,7 @@ let firstNumber = 10,
 console.log(
   `${firstNumber} / ${secondNumber} = ${~~(
     firstNumber / secondNumber
-  )} reminder `.concat(firstNumber % secondNumber)
+  )} remainder ${firstNumber % secondNumber}`
 );
 
 let age = parseInt(19);
@@ -42,3 +42,66 @@ let newArray = [1, 2, 3, 4, 5, "seth", "myself"];
 console.log(newArray);
 let emptyVariable = null;
 let undefinedVariable;
+
+let moneyToConvert = 1000;
+let dollar = 18.48;
+let euro = 19.71;
+let pound = 22.63;
+
+console.log(`Dollar `.concat((moneyToConvert / dollar).toFixed(2)));
+console.log(`Euro `.concat((moneyToConvert / euro).toFixed(2)));
+console.log(`Pound `.concat((moneyToConvert / pound).toFixed(2)));
+
+let enteredAmount = 400;
+let vat = 0.15;
+console.log(
+  `The amount after tax is R`.concat(enteredAmount + enteredAmount * vat)
+);
+
+let firstNum = 8;
+let secondNum = 20;
+let thirdNum = 14;
+
+if (firstNum >= secondNum && firstNum >= thirdNum) {
+  console.log(firstNum);
+} else if (secondNum >= firstNum && secondNum >= thirdNum) {
+  console.log(secondNum);
+} else {
+  console.log(thirdNum);
+}
+
+if (firstNum % 2 == 0) {
+  console.log("Even");
+} else {
+  console.log("Odd");
+}
+
+if (firstNum >= secondNum && firstNum >= thirdNum && secondNum >= thirdNum) {
+  console.log(firstNum, secondNum, thirdNum);
+} else if (
+  firstNum >= secondNum &&
+  firstNum >= thirdNum &&
+  secondNum <= thirdNum
+) {
+  console.log(firstName, thirdNum, secondNum);
+} else if (
+  secondNum >= firstNum &&
+  secondNum >= thirdNum &&
+  firstNum >= thirdNum
+) {
+  console.log(secondNum, firstNum, thirdNum);
+} else if (
+  secondNum >= firstNum &&
+  secondNum >= thirdNum &&
+  firstNum <= thirdNum
+) {
+  console.log(secondNum, thirdNum, firstNum);
+} else if (
+  thirdNum >= firstNum &&
+  thirdNum >= secondNum &&
+  firstNum >= secondNum
+) {
+  console.log(thirdNum, firstNum, secondNum);
+} else {
+  console.log(thirdNum, secondNum, firstNum);
+}
